@@ -1,24 +1,19 @@
 using System;
+
 namespace HighCardGame.Cards {
     // Defines the Card type
     public class Card {
-        public const int maxValue = 14;
-
         public enum CardSuit {
             Spades,
             Clubs,
             Diamonds,
             Hearts
         }
-
-        public enum CardValue {
-            Jack = 11,
-            Queen = 12,
-            King = 13,
-            Ace = maxValue
-        }
-
+        // The max face value a card can have
+        public const int maxValue = 14;
+        // The suit type of the card
         public CardSuit Suit { get; }
+        // The face value of the card
         public int Value { get; }
 
         // Constructor
@@ -29,6 +24,29 @@ namespace HighCardGame.Cards {
                 Console.WriteLine("Card value must be between 2 and " + val);
             else
                 this.Value = val;
+        }
+
+        // Get String of the card's info 
+        public String GetCardStr() {
+            String valStr;
+            switch (this.Value) {
+                case 11:
+                    valStr = "Jack";
+                    break;
+                case 12:
+                    valStr = "Queen";
+                    break;
+                case 13:
+                    valStr = "King";
+                    break;
+                case 14:
+                    valStr = "Ace";
+                    break;
+                default:
+                    valStr = this.Value.ToString();
+                    break;
+            }
+            return valStr + " of " + this.Suit;
         }
     }
 }

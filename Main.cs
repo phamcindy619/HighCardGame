@@ -8,7 +8,8 @@ namespace HighCardGame
         static void Main(string[] args)
         {
             CardSystem game = new CardSystem();
-            game.dealCards();
+            game.DealCards();
+            game.GetWinner();
         }
     }
 }

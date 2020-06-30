@@ -14,13 +14,12 @@ namespace HighCardGame.Players {
         }
 
         // Show the player's current card
-        public Card showCard() {
+        public Card GetCard() {
             return card;
         }
         // Deals the player a new card
-        public void dealCard(Card newCard)  {
+        public void DealCard(Card newCard)  {
             this.card = newCard;
-            Console.WriteLine("Card: " + this.card.Suit + " " + this.card.Value);
         }
     }
 }
