@@ -10,7 +10,7 @@ namespace HighCardGame.Cards {
             Hearts
         }
         // The max face value a card can have
-        public const int maxValue = 14;
+        public const int MAX_VAL = 14;
         // The suit type of the card
         public CardSuit Suit { get; }
         // The face value of the card
@@ -20,7 +20,7 @@ namespace HighCardGame.Cards {
         public Card(CardSuit suit, int val) {
             this.Suit = suit;
             // Validate card value
-            if (val < 2 || val > maxValue)
+            if (val < 2 || val > MAX_VAL)
                 Console.WriteLine("Card value must be between 2 and " + val);
             else
                 this.Value = val;

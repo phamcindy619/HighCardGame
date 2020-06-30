@@ -19,7 +19,7 @@ namespace HighCardGame.CardSystems {
             
             // Initialize players
             players = new List<Player>(); 
-            for (int i = 1; i <= numOfPlayers; i++) {
+            for (var i = 1; i <= numOfPlayers; i++) {
                 Player newPlayer = new Player(i);
                 players.Add(newPlayer);
             }
@@ -31,7 +31,7 @@ namespace HighCardGame.CardSystems {
         // Reset to a full standard playing deck
         private void ResetDeck() {
             foreach (Card.CardSuit suit in Enum.GetValues(typeof(Card.CardSuit))) {
-                for (int i = 2; i <= Card.maxValue; i++) {
+                for (var i = 2; i <= Card.MAX_VAL; i++) {
                     Card newCard = new Card(suit, i);
                     // Add card to the deck
                     deck.Add(newCard);
@@ -41,8 +41,7 @@ namespace HighCardGame.CardSystems {
 
         // Generate a random index into the deck to imitate
         // shuffling the cards
-        public int ShuffleDeck() {
-            Console.WriteLine("Shuffling the deck...");
+        private int ShuffleDeck() {
             return rand.Next(0, deck.Count);
         }
 
@@ -60,7 +59,6 @@ namespace HighCardGame.CardSystems {
 
         // Restart the game and reset deck
         public void RestartGame() {
-            Console.WriteLine("Restart game...");
             ResetDeck();
         }
 
@@ -74,12 +72,12 @@ namespace HighCardGame.CardSystems {
                 Console.WriteLine("Player " + player.PlayerNum + ": " +
                     currCard.GetCardStr());
                 // Determine whether this player's card is higher than the current winning card
-                if (winningCard == null || (currCard.Value > winningCard.Value)) {
+                if ((winningCard == null) || (currCard.Value > winningCard.Value)) {
                     winningCard = currCard;
                     winner = player;
                 }
                 // Use suit if there is a tie in card value
-                else if (winningCard != null && (currCard.Value == winningCard.Value)) {
+                else if ((winningCard != null) && (currCard.Value == winningCard.Value)) {
                     if (currCard.Suit > winningCard.Suit) {
                         winningCard = currCard;
                         winner = player;
