@@ -3,8 +3,9 @@ using HighCardGame.CardSystems;
 
 namespace HighCardGame.App {
     class Program {
-        // Maximum number of menu choices
+        // Maximum number of menu options for user to select from
         const char MAX_CHOICES = '2';
+
         // Display all menu options for High Card game
         static void DisplayGameMenu() {
             Console.WriteLine();
@@ -15,7 +16,7 @@ namespace HighCardGame.App {
             Console.WriteLine();
         }
 
-        // Gets the user's choice, validates, and returns it
+        // Get the user's choice from input, validates, and returns it
         static char GetChoice() {
             // Get user input
             Console.Write("Enter your choice: ");
@@ -44,17 +45,18 @@ namespace HighCardGame.App {
             {
                 DisplayGameMenu();
                 userChoice = GetChoice();
-
-                Console.WriteLine("Press any key to continue...");
-                Console.ReadKey();
-                Console.WriteLine();
                 
                 // Execute action based on user input
                 switch (userChoice) {
                     // Start new game
                     case '1':
+                        Console.WriteLine("Press any key to deal cards.");
+                        Console.ReadKey();
+                        Console.WriteLine();
+
                         game.DealCards();
-                        game.GetWinner();
+                        game.ShowCards();
+                        game.ShowWinner();
                         game.RestartGame();
                         break;
                 }

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HighCardGame</name>
+    </assembly>
+    <members>
+        <member name="F:HighCardGame.CardSystems.CardSystem.deck">
+            <summary>
+            List of all the cards in a single game
+            </summary>
+        </member>
+    </members>
+</doc>

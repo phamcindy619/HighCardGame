@@ -1,32 +1,53 @@
 using System;
 
 namespace HighCardGame.Cards {
-    // Defines the Card type
+    /// <summary>
+    /// The main Card class.
+    /// Contains all data and methods for performing Card functions.
+    /// </summary>
     public class Card {
+        /// <summary>
+        /// A card suit type enum.
+        /// </summary>
         public enum CardSuit {
             Spades,
             Clubs,
             Diamonds,
             Hearts
         }
-        // The max face value a card can have
+        /// <summary>
+        /// The maximum face value a card can have.
+        /// </summary>
         public const int MAX_VAL = 14;
-        // The suit type of the card
+        /// <value>Gets the suit type of this Card.</value>
         public CardSuit Suit { get; }
-        // The face value of the card
+        /// <value>Gets the face value of this Card.</value>
         public int Value { get; }
 
-        // Constructor
+        /// <summary>
+        /// Overloaded constructor. 
+        /// Initializes this Card to a suit type <paramref name="suit"/> and face value <paramref name="val"/>.
+        /// </summary>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// Thrown when <paramref name="val"/> is less than or greater than the maximum value allowed.
+        /// </exception>
+        /// <param name="suit">A CardSuit type.</param>
+        /// <param name="val">An integer value.</param>
         public Card(CardSuit suit, int val) {
             this.Suit = suit;
             // Validate card value
             if (val < 2 || val > MAX_VAL)
-                Console.WriteLine("Card value must be between 2 and " + val);
+                throw new ArgumentOutOfRangeException("Card value must be between 2 and " + val);
             else
                 this.Value = val;
         }
 
-        // Get String of the card's info 
+        /// <summary>
+        /// Returns the String containing this Card's value and suit.
+        /// </summary>
+        /// <returns>
+        /// String containing this Card's value and suit.
+        /// </returns>
         public String GetCardStr() {
             String valStr;
             switch (this.Value) {
@@ -46,7 +67,7 @@ namespace HighCardGame.Cards {
                     valStr = this.Value.ToString();
                     break;
             }
-            return valStr + " of " + this.Suit;
+            return $"{valStr} of {this.Suit}";
         }
     }
 }
