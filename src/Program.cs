@@ -47,6 +47,11 @@ namespace CardGames.App {
                         game.ShowCards();
                         game.ShowWinner();
                         game.RestartGame();
+
+                        Console.WriteLine();
+                        Console.WriteLine("Press any key to continue.");
+                        Console.ReadKey();
+                        Console.WriteLine();
                         break;
                 }
             } while (userChoice != HighCardGame.MAX_CHOICES);
