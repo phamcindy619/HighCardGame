@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using CardGame.Cards;
-using CardGame.Players;
+using CardGames.Cards;
+using CardGames.Players;
 
-namespace CardGame.CardSystems {
+namespace CardGames.CardSystems {
     /// <summary>
     /// The main CardSystem class.
     /// Contains all methods for performing Standard Playing Card game functionalitiess.

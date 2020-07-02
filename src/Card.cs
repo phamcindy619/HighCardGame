@@ -1,6 +1,6 @@
 using System;
 
-namespace CardGame.Cards {
+namespace CardGames.Cards {
     /// <summary>
     /// The main Card class.
     /// Contains all Card types and methods for displaying Card info.

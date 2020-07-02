@@ -1,9 +1,28 @@
 ﻿using System;
-using CardGame.HighCardGames;
+using CardGames.HighCardGames;
 
-namespace CardGame.App {
+namespace CardGames.App {
     class Program {
         
+        // Gets the user's choice, validates, and returns it.
+        static char GetChoice() {
+            // Get user input.
+            Console.Write("Enter your choice: ");
+            char choice = (char) Console.ReadKey().KeyChar;
+            Console.WriteLine();
+            Console.WriteLine();
+
+            // Validate user input.
+            while (choice < '1' || choice > HighCardGame.MAX_CHOICES) {
+                Console.WriteLine("Choice must be between 1 and " + HighCardGame.MAX_CHOICES);
+                Console.Write("Enter a valid choice: ");
+                choice = (char) Console.ReadKey().KeyChar;
+                Console.WriteLine();
+                Console.WriteLine();
+            }
+            
+            return choice;
+        }
 
         // Driver program.
         static void Main(string[] args) {
@@ -13,7 +32,7 @@ namespace CardGame.App {
             do
             {
                 HighCardGame.DisplayGameMenu();
-                userChoice = HighCardGame.GetChoice();
+                userChoice = GetChoice();
                 
                 // Execute action based on user input. If input matches the last
                 // choice, then exit the game loop.

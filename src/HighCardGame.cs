@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
-using CardGame.CardSystems;
-using CardGame.Cards;
-using CardGame.Players;
+using CardGames.CardSystems;
+using CardGames.Cards;
+using CardGames.Players;
 
 
-namespace CardGame.HighCardGames {
+namespace CardGames.HighCardGames {
     /// <summary>
     /// The main HighCardGame class.
     /// Contains all methods for playing the High Card game.
@@ -101,31 +101,6 @@ namespace CardGame.HighCardGames {
             Console.WriteLine("1. Start new game");
             Console.WriteLine("2. Quit");
             Console.WriteLine();
-        }
-
-        /// <summary>
-        /// Gets the user's choice from input and validates it.
-        /// </summary>
-        /// <returns>
-        /// A character from the user's input.
-        /// </returns>
-        public static char GetChoice() {
-            // Get user input.
-            Console.Write("Enter your choice: ");
-            char choice = (char) Console.ReadKey().KeyChar;
-            Console.WriteLine();
-            Console.WriteLine();
-
-            // Validate user input.
-            while (choice < '1' || choice > MAX_CHOICES) {
-                Console.WriteLine("Choice must be between 1 and " + MAX_CHOICES);
-                Console.Write("Enter a valid choice: ");
-                choice = (char) Console.ReadKey().KeyChar;
-                Console.WriteLine();
-                Console.WriteLine();
-            }
-            
-            return choice;
         }
     }
 }

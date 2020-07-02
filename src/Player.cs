@@ -1,6 +1,6 @@
-using CardGame.Cards;
+using CardGames.Cards;
 
-namespace CardGame.Players {
+namespace CardGames.Players {
     /// <summary>
     /// The main Player class.
     /// Contains all methods for player interaction with card games.

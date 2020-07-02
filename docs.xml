@@ -4,49 +4,49 @@
         <name>HighCardGame</name>
     </assembly>
     <members>
-        <member name="T:CardGame.Cards.Card">
+        <member name="T:CardGames.Cards.Card">
             <summary>
             The main Card class.
             Contains all Card types and methods for displaying Card info.
             </summary>
         </member>
-        <member name="T:CardGame.Cards.Card.CardSuit">
+        <member name="T:CardGames.Cards.Card.CardSuit">
             <summary>
             A card suit category enum.
             </summary>
         </member>
-        <member name="F:CardGame.Cards.Card.CardSuit.Spades">
+        <member name="F:CardGames.Cards.Card.CardSuit.Spades">
             <summary>
             The Spades suit type.    
             </summary>    
         </member>
-        <member name="F:CardGame.Cards.Card.CardSuit.Clubs">
+        <member name="F:CardGames.Cards.Card.CardSuit.Clubs">
             <summary>
             The Clubs suit type.    
             </summary>  
         </member>
-        <member name="F:CardGame.Cards.Card.CardSuit.Diamonds">
+        <member name="F:CardGames.Cards.Card.CardSuit.Diamonds">
             <summary>
             The Diamonds suit type.    
             </summary>  
         </member>
-        <member name="F:CardGame.Cards.Card.CardSuit.Hearts">
+        <member name="F:CardGames.Cards.Card.CardSuit.Hearts">
             <summary>
             The Hearts suit type.    
             </summary>  
         </member>
-        <member name="F:CardGame.Cards.Card.MAX_VAL">
+        <member name="F:CardGames.Cards.Card.MAX_VAL">
             <summary>
             The maximum face value a card can have.
             </summary>
         </member>
-        <member name="P:CardGame.Cards.Card.Suit">
+        <member name="P:CardGames.Cards.Card.Suit">
             <value>Gets the suit type of this Card.</value>
         </member>
-        <member name="P:CardGame.Cards.Card.Value">
+        <member name="P:CardGames.Cards.Card.Value">
             <value>Gets the face value of this Card.</value>
         </member>
-        <member name="M:CardGame.Cards.Card.#ctor(CardGame.Cards.Card.CardSuit,System.Int32)">
+        <member name="M:CardGames.Cards.Card.#ctor(CardGames.Cards.Card.CardSuit,System.Int32)">
             <summary>
             Overloaded constructor. 
             Initializes this Card to a suit type <paramref name="suit"/> and face value <paramref name="val"/>.
@@ -57,7 +57,7 @@
             <param name="suit">A CardSuit type.</param>
             <param name="val">An integer value.</param>
         </member>
-        <member name="M:CardGame.Cards.Card.GetCardStr">
+        <member name="M:CardGames.Cards.Card.GetCardStr">
             <summary>
             Returns the String containing this Card's value and suit.
             </summary>
@@ -65,100 +65,92 @@
             String containing this Card's value and suit.
             </returns>
         </member>
-        <member name="T:CardGame.CardSystems.CardSystem">
+        <member name="T:CardGames.CardSystems.CardSystem">
             <summary>
             The main CardSystem class.
             Contains all methods for performing Standard Playing Card game functionalitiess.
             </summary>
         </member>
-        <member name="M:CardGame.CardSystems.CardSystem.#ctor">
+        <member name="M:CardGames.CardSystems.CardSystem.#ctor">
             <summary>
             Default constructor.
             Creates a new deck of cards and new list of players.
             </summary>
         </member>
-        <member name="M:CardGame.CardSystems.CardSystem.ResetDeck">
+        <member name="M:CardGames.CardSystems.CardSystem.ResetDeck">
             <summary>
             Resets the deck to a full standard deck.
             </summary>
         </member>
-        <member name="M:CardGame.CardSystems.CardSystem.DealCard(CardGame.Players.Player)">
+        <member name="M:CardGames.CardSystems.CardSystem.DealCard(CardGames.Players.Player)">
             <summary>
             Deals a single random card from the deck to the player.
             </summary>
         </member>
-        <member name="M:CardGame.CardSystems.CardSystem.ShowCard(CardGame.Players.Player)">
+        <member name="M:CardGames.CardSystems.CardSystem.ShowCard(CardGames.Players.Player)">
             <summary>
             Prints the player's card info.
             </summary>
         </member>
-        <member name="T:CardGame.HighCardGames.HighCardGame">
+        <member name="T:CardGames.HighCardGames.HighCardGame">
             <summary>
             The main HighCardGame class.
             Contains all methods for playing the High Card game.
             </summary>
         </member>
-        <member name="F:CardGame.HighCardGames.HighCardGame.MAX_CHOICES">
+        <member name="F:CardGames.HighCardGames.HighCardGame.MAX_CHOICES">
             <summary>
             Maximum number of menu options for user to select from.
             </summary>
         </member>
-        <member name="M:CardGame.HighCardGames.HighCardGame.#ctor">
+        <member name="M:CardGames.HighCardGames.HighCardGame.#ctor">
             <summary>
             Default constructor.
             Initializes all players in the game.
             </summary>
         </member>
-        <member name="M:CardGame.HighCardGames.HighCardGame.DealCards">
+        <member name="M:CardGames.HighCardGames.HighCardGame.DealCards">
             <summary>
             Gives a Card to each player.
             </summary>
         </member>
-        <member name="M:CardGame.HighCardGames.HighCardGame.ShowCards">
+        <member name="M:CardGames.HighCardGames.HighCardGame.ShowCards">
             <summary>
             Prints each player's Card info
             </summary>
         </member>
-        <member name="M:CardGame.HighCardGames.HighCardGame.ShowWinner">
+        <member name="M:CardGames.HighCardGames.HighCardGame.ShowWinner">
             <summary>
             Determines the player with the higher card and prints the winner
             </summary>
         </member>
-        <member name="M:CardGame.HighCardGames.HighCardGame.RestartGame">
+        <member name="M:CardGames.HighCardGames.HighCardGame.RestartGame">
             <summary>
             Restarts the High Card game.
             </summary>
         </member>
-        <member name="M:CardGame.HighCardGames.HighCardGame.DisplayGameMenu">
+        <member name="M:CardGames.HighCardGames.HighCardGame.DisplayGameMenu">
             <summary>
             Display all menu options for High Card game.
             </summary>
         </member>
-        <member name="M:CardGame.HighCardGames.HighCardGame.GetChoice">
-            <summary>
-            Gets the user's choice from input and validates it.
-            </summary>
-            <returns>
-            A character from the user's input.
-            </returns>
-        </member>
-        <member name="T:CardGame.Players.Player">
+        <member name="T:CardGames.Players.Player">
             <summary>
             The main Player class.
             Contains all methods for player interaction with card games.
             </summary>
         </member>
-        <member name="P:CardGame.Players.Player.PlayerNum">
+        <member name="P:CardGames.Players.Player.PlayerNum">
             <value>Gets the player's identifier number.</value>
         </member>
-        <member name="M:CardGame.Players.Player.#ctor(System.Int32)">
+        <member name="M:CardGames.Players.Player.#ctor(System.Int32)">
             <summary>
             Overloaded constructor.
             Initializes the player with an identifier number <paramref name="num"/>.
             </summary>
             <param name="num">An integer number.</param>
         </member>
-        <member name="M:CardGame.Players.Player.GetCard">
+        <member name="M:CardGames.Players.Player.GetCard">
             <summary>
             Returns the current Card that this player is holding.
             </summary>
@@ -166,7 +158,7 @@
             The current Card.
             </returns>
         </member>
-        <member name="M:CardGame.Players.Player.DealCard(CardGame.Cards.Card)">
+        <member name="M:CardGames.Players.Player.DealCard(CardGames.Cards.Card)">
             <summary>
             Replaces the current Card that this player is holding with a new Card <paramref name="newCard"/>.
             </summary>
