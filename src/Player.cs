@@ -1,10 +1,9 @@
-using System;
-using HighCardGame.Cards;
+using CardGame.Cards;
 
-namespace HighCardGame.Players {
+namespace CardGame.Players {
     /// <summary>
     /// The main Player class.
-    /// Contains all data and methods for player interaction with the Card System.
+    /// Contains all methods for player interaction with card games.
     /// </summary>
     public class Player {
         private Card card;
@@ -27,7 +26,7 @@ namespace HighCardGame.Players {
         /// The current Card.
         /// </returns>
         public Card GetCard() {
-            return card;
+            return this.card;
         }
 
         /// <summary>

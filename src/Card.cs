@@ -1,18 +1,30 @@
 using System;
 
-namespace HighCardGame.Cards {
+namespace CardGame.Cards {
     /// <summary>
     /// The main Card class.
-    /// Contains all data and methods for performing Card functions.
+    /// Contains all Card types and methods for displaying Card info.
     /// </summary>
     public class Card {
         /// <summary>
-        /// A card suit type enum.
+        /// A card suit category enum.
         /// </summary>
         public enum CardSuit {
+            /// <summary>
+            /// The Spades suit type.    
+            /// </summary>    
             Spades,
+            /// <summary>
+            /// The Clubs suit type.    
+            /// </summary>  
             Clubs,
+            /// <summary>
+            /// The Diamonds suit type.    
+            /// </summary>  
             Diamonds,
+            /// <summary>
+            /// The Hearts suit type.    
+            /// </summary>  
             Hearts
         }
         /// <summary>
@@ -35,7 +47,7 @@ namespace HighCardGame.Cards {
         /// <param name="val">An integer value.</param>
         public Card(CardSuit suit, int val) {
             this.Suit = suit;
-            // Validate card value
+            // Validate the card value.
             if (val < 2 || val > MAX_VAL)
                 throw new ArgumentOutOfRangeException("Card value must be between 2 and " + val);
             else
