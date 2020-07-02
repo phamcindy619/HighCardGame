@@ -68,7 +68,7 @@
         <member name="T:CardGames.CardSystems.CardSystem">
             <summary>
             The main CardSystem class.
-            Contains all methods for performing Standard Playing Card game functionalitiess.
+            Contains all methods for performing Standard Playing Card game functionalities.
             </summary>
         </member>
         <member name="M:CardGames.CardSystems.CardSystem.#ctor">

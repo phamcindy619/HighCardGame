@@ -6,7 +6,7 @@ using CardGames.Players;
 namespace CardGames.CardSystems {
     /// <summary>
     /// The main CardSystem class.
-    /// Contains all methods for performing Standard Playing Card game functionalitiess.
+    /// Contains all methods for performing Standard Playing Card game functionalities.
     /// </summary>
     public class CardSystem {
         // List of all the cards in a single game.
