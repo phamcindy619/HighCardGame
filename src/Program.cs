@@ -3,7 +3,6 @@ using CardGames.HighCardGames;
 
 namespace CardGames.App {
     class Program {
-        
         // Gets the user's choice, validates, and returns it.
         static char GetChoice() {
             // Get user input.
@@ -20,7 +19,6 @@ namespace CardGames.App {
                 Console.WriteLine();
                 Console.WriteLine();
             }
-            
             return choice;
         }
 

@@ -44,6 +44,7 @@ namespace CardGames.CardSystems {
             }
         }
 
+        // Returns a random card from the deck
         private Card GetRandomCard() {
             int index = rand.Next(0, this.deck.Count);
             return this.deck[index];
@@ -69,3 +70,4 @@ namespace CardGames.CardSystems {
         }
     }
 }
+

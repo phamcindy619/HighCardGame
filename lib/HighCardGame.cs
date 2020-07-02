@@ -4,7 +4,6 @@ using CardGames.CardSystems;
 using CardGames.Cards;
 using CardGames.Players;
 
-
 namespace CardGames.HighCardGames {
     /// <summary>
     /// The main HighCardGame class.

@@ -6,6 +6,7 @@ namespace CardGames.Players {
     /// Contains all methods for player interaction with card games.
     /// </summary>
     public class Player {
+        // Current card that the player is holding
         private Card card;
         /// <value>Gets the player's identifier number.</value>
         public int PlayerNum { get; }
